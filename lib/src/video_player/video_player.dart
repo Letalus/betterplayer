@@ -220,8 +220,8 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
           );
           if(!_initializingCompleter.isCompleted){
           _initializingCompleter.complete(null);
-          }
           _applyPlayPause();
+          }
           break;
         case VideoEventType.completed:
           value = value.copyWith(isPlaying: false, position: value.duration);
