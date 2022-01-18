@@ -218,7 +218,11 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
             duration: event.duration,
             size: event.size,
           );
+          
+          //Need to check that initializer has not yet completed because otherwise this can throw an error
+          if(!_initializingCompleter.isCompleted){
           _initializingCompleter.complete(null);
+          }
           _applyPlayPause();
           break;
         case VideoEventType.completed:
