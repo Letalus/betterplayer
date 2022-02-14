@@ -269,9 +269,11 @@ class _BetterPlayerVideoFitWidgetState
 
         if (_initialized != controller!.value.initialized) {
           _initialized = controller!.value.initialized;
-          if(mounted){
-            setState(() {});
-          }
+          Future.delayed(Duration.zero, () {
+            if (mounted) {
+              setState(() {});
+            }
+          });
         }
       };
       controller!.addListener(_initializedListener!);
