@@ -266,6 +266,7 @@ static inline CGFloat radiansToDegrees(CGFloat radians) {
             }
         }
     };
+    
 
     [asset loadValuesAsynchronouslyForKeys:@[ @"tracks" ] completionHandler:assetCompletionHandler];
     [self addObservers:item];

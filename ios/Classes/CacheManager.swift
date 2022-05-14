@@ -21,7 +21,7 @@ import PINCache
     let memoryConfig = MemoryConfig(
       // Expiry date that will be applied by default for every added object
       // if it's not overridden in the `setObject(forKey:expiry:)` method
-      expiry: .never,
+        expiry: .never,
       // The maximum number of objects in memory the cache should hold
       countLimit: 0,
       // The maximum total cost that the cache can hold before it starts evicting objects, 0 for no limit
