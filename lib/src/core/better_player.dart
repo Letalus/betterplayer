@@ -63,7 +63,7 @@ class _BetterPlayerState extends State<BetterPlayer> with WidgetsBindingObserver
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
   }
 
   @override
@@ -108,7 +108,7 @@ class _BetterPlayerState extends State<BetterPlayer> with WidgetsBindingObserver
       SystemChrome.setPreferredOrientations(_betterPlayerConfiguration.deviceOrientationsAfterFullScreen);
     }
 
-    WidgetsBinding.instance!.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     _controllerEventSubscription?.cancel();
     widget.controller.dispose();
     VisibilityDetectorController.instance.forget(Key("${widget.controller.hashCode}_key"));
